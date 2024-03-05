@@ -1,0 +1,8 @@
+[core]
+    remote = dvc_files
+[cache]
+    type = "hardlink,symlink"
+['remote "dvc_files"']
+    url = ssh://91.206.15.25/home/d.iunovidov/dvc_files
+    user = d.iunovidov
+    ask_passphrase = true

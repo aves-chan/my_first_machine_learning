@@ -1,0 +1,67 @@
+config: !!python/object:src.config.Config
+  __dict__:
+    accelerator: gpu
+    data_config: !!python/object:src.config.DataConfig
+      __dict__:
+        batch_size: 32
+        data_path: dataset/planet/planet
+        height: 224
+        n_workers: 4
+        train_size: 0.8
+        width: 224
+      __fields_set__: !!set
+        batch_size: null
+        data_path: null
+        height: null
+        n_workers: null
+        train_size: null
+        width: null
+      __private_attribute_values__: {}
+    device: 0
+    experiment_name: experiment2
+    losses:
+    - !!python/object:src.config.LossConfig
+      __dict__:
+        loss_fn: torch.nn.BCEWithLogitsLoss
+        loss_kwargs: {}
+        name: bce
+        weight: 1.0
+      __fields_set__: !!set
+        loss_fn: null
+        loss_kwargs: null
+        name: null
+        weight: null
+      __private_attribute_values__: {}
+    model_kwargs:
+      model_name: efficientnet_b3
+      pretrained: true
+    monitor_metric: val_f1
+    monitor_mode: max
+    n_epochs: 300
+    num_classes: 17
+    optimizer: torch.optim.AdamW
+    optimizer_kwargs:
+      lr: 0.001
+      weight_decay: 1.0e-05
+    project_name: hw-01_Planet
+    scheduler: torch.optim.lr_scheduler.CosineAnnealingLR
+    scheduler_kwargs:
+      T_max: 10
+      eta_min: 1.0e-05
+  __fields_set__: !!set
+    accelerator: null
+    data_config: null
+    device: null
+    experiment_name: null
+    losses: null
+    model_kwargs: null
+    monitor_metric: null
+    monitor_mode: null
+    n_epochs: null
+    num_classes: null
+    optimizer: null
+    optimizer_kwargs: null
+    project_name: null
+    scheduler: null
+    scheduler_kwargs: null
+  __private_attribute_values__: {}
